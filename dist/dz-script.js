@@ -25,7 +25,7 @@
   }
 
   function isTypes(value, type) {
-      return Object.prototype.toString.call(value) === "[object " + type + "]";
+      return Object.prototype.toString.call(value) === "[object ".concat(type, "]");
   }
   function isUndefined(value) {
       return isTypes(value, 'Undefined');
@@ -142,7 +142,7 @@
       window.sessionStorage.clear();
   }
 
-  var version = '0.0.2';
+  var version = '0.0.3';
 
   exports.REFEXP_IPV6 = REFEXP_IPV6;
   exports.REGEXP_CODE_FOUR = REGEXP_CODE_FOUR;

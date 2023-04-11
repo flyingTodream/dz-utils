@@ -7,4 +7,4 @@ export * from './common/regexp';
 export * from './storage/local';
 export * from './storage/session';
 
-export const version = '0.0.2';
+export const version = '0.0.3';
