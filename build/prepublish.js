@@ -54,7 +54,7 @@ const npmignorePatterns = npmignore.split(/\r?\n/).filter((item) => item && !ite
 const untrackedFiles = execSync('git ls-files --others --exclude-standard', { encoding: 'utf-8' })
   .trim()
   .split('\n')
-  .map(escapeOctal);
+  .map(escapeOctal).filter(f => f && f !== '');
 
 if (untrackedFiles.length) {
   const maybeUnexpectedFiles = ignore().add(npmignorePatterns).filter(untrackedFiles);
