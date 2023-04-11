@@ -1,0 +1,35 @@
+{
+  "extends": "airbnb-base",
+  "plugins": [
+    "jest"
+  ],
+  "env": {
+    "jest/globals": true
+  },
+  "globals": {
+    "window": true
+  },
+  "rules": {
+    "no-param-reassign": [
+      0
+    ],
+    "func-names": [
+      0
+    ],
+    "import/no-extraneous-dependencies": [
+      0
+    ],
+    "import/no-unresolved": [
+      2,
+      {
+        "ignore": [
+          "dayjs"
+        ]
+      }
+    ],
+    "import/extensions": [
+      2,
+      "never"
+    ]
+  }
+}
