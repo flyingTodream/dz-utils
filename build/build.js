@@ -44,7 +44,7 @@ function createInputOption(env, isWatch) {
 
 const outputOption = {
   format: 'umd',
-  file: path.resolve(__dirname, '../dist/dz-tools.js'),
+  file: path.resolve(__dirname, '../dist/dz-script.js'),
   sourcemap: false,
   name: 'dzUtils',
 };

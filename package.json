@@ -1,5 +1,5 @@
 {
-  "name": "dz-tools",
+  "name": "dz-script",
   "version": "0.0.1",
   "description": "frontend tools",
   "keywords": [
@@ -28,7 +28,7 @@
   "license": "MIT",
   "types": "index.d.ts",
   "module": "index.js",
-  "main": "dist/dz-tools.js",
+  "main": "dist/dz-script.js",
   "dependencies": {
     "tslib": "2.3.0"
   },

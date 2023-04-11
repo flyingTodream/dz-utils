@@ -13,7 +13,7 @@ console.log();
 
 console.log(chalk.yellow('🔎 Checking versions in dist files...'));
 
-const fileVersions = ['package.json', 'package-lock.json', 'dist/dz-tools.js'].map((filePath) => ({
+const fileVersions = ['package.json', 'package-lock.json', 'dist/dz-script.js'].map((filePath) => ({
   file: filePath,
   version: require('../' + filePath).version,
 }));
