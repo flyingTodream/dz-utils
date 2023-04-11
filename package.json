@@ -1,5 +1,5 @@
 {
-  "name": "dz-utils",
+  "name": "dz-tools",
   "version": "0.0.1",
   "description": "frontend tools",
   "keywords": [
@@ -28,7 +28,7 @@
   "license": "MIT",
   "types": "index.d.ts",
   "module": "index.js",
-  "main": "dist/dz-utils.js",
+  "main": "dist/dz-tools.js",
   "dependencies": {
     "tslib": "2.3.0"
   },
@@ -42,7 +42,7 @@
     "chalk": "^3.0.0",
     "commander": "2.11.0",
     "eslint": "6.3.0",
-    "fs-extra": "4.0.2",
+    "fs-extra": "^4.0.2",
     "globby": "^11.0.4",
     "jest": "^27.2.5",
     "jsdom": "^16.0.0",

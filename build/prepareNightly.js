@@ -2,7 +2,7 @@ const fs = require('fs');
 const { execSync } = require('child_process');
 
 const packageJsonPath = __dirname + '/../package.json';
-const nightlyPackageName = 'dz-utils-nightly';
+const nightlyPackageName = 'dz-tools-nightly';
 
 function updateVersion(version) {
   const isNext = process.argv.includes('--next');
