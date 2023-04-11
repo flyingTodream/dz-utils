@@ -4,6 +4,26 @@
   (global = global || self, factory(global.dzUtils = {}));
 }(this, (function (exports) { 'use strict';
 
+  function animate(from, to, callBack, duration) {
+      var start = performance.now();
+      requestAnimationFrame(function animate(time) {
+          var timeFraction = (time - start) / duration;
+          if (timeFraction > 1)
+              timeFraction = 1;
+          callBack(from + (to - from) * timeFraction);
+          if (timeFraction < 1) {
+              requestAnimationFrame(animate);
+          }
+      });
+  }
+
+  function delay(time) {
+      if (time === void 0) { time = 1000; }
+      return new Promise(function (resolve) {
+          setTimeout(resolve, time);
+      });
+  }
+
   function isTypes(value, type) {
       return Object.prototype.toString.call(value) === "[object " + type + "]";
   }
@@ -122,7 +142,7 @@
       window.sessionStorage.clear();
   }
 
-  var version = '0.0.1';
+  var version = '0.0.2';
 
   exports.REFEXP_IPV6 = REFEXP_IPV6;
   exports.REGEXP_CODE_FOUR = REGEXP_CODE_FOUR;
@@ -132,9 +152,11 @@
   exports.REGEXP_PHONE = REGEXP_PHONE;
   exports.REGEXP_PWD = REGEXP_PWD;
   exports.REGEXP_URL = REGEXP_URL;
+  exports.animate = animate;
   exports.clearLocal = clearLocal;
   exports.clearSession = clearSession;
   exports.deepMerge = deepMerge;
+  exports.delay = delay;
   exports.downloadFile = downloadFile;
   exports.formatStringToJson = formatStringToJson;
   exports.getLocal = getLocal;

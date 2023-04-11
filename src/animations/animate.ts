@@ -21,4 +21,4 @@ function animate(from: number, to: number, callBack?: (val: number) => void, dur
   });
 }
 
-export default animate;
+export { animate };
