@@ -240,7 +240,7 @@
       });
   }
 
-  var version = '0.0.3';
+  var version = '0.0.4';
 
   exports.REFEXP_IPV6 = REFEXP_IPV6;
   exports.REGEXP_CODE_FOUR = REGEXP_CODE_FOUR;
