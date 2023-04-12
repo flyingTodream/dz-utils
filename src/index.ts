@@ -8,4 +8,4 @@ export * from './storage/local';
 export * from './storage/session';
 export * from './hooks/useUpload';
 
-export const version = '0.0.3';
+export const version = '0.0.4';
