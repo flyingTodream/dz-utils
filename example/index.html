@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script src="../dist/dz-script.min.js"></script>
+
+<body>
+    <div id="num"></div>
+</body>
+<script>
+    dzUtils.animate(1, 500, (val) => {
+        document.getElementById('num').style.width = val + 'px'
+        document.getElementById('num').style.left = val + 'px'
+        document.getElementById('num').style.height = val + 'px'
+    }, 500)
+</script>
+
+</html>
+<style>
+    #num {
+        width: 100px;
+        height: 100px;
+        background-color: aqua;
+        position: absolute;
+    }
+</style>
