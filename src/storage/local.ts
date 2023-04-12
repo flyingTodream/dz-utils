@@ -6,6 +6,11 @@
 /** 默认缓存期限为7天 */
 // const DEFAULT_CACHE_TIME = 60 * 60 * 24 * 7;
 
+/**
+ *
+ * @param key
+ * @param value
+ */
 export function setLocal(
   key: string,
   value: unknown
@@ -14,6 +19,11 @@ export function setLocal(
   window.localStorage.setItem(key, String(value));
 }
 
+/**
+ *
+ * @param key
+ * @returns
+ */
 export function getLocal<T>(key: string) {
   const json: unknown = window.localStorage.getItem(key);
   if (json) {
@@ -22,10 +32,17 @@ export function getLocal<T>(key: string) {
   return null;
 }
 
+/**
+ *
+ * @param key
+ */
 export function removeLocal(key: string) {
   window.localStorage.removeItem(key);
 }
 
+/**
+ *
+ */
 export function clearLocal() {
   window.localStorage.clear();
 }

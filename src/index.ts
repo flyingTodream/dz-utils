@@ -6,4 +6,6 @@ export * from './common/serializeParams';
 export * from './common/regexp';
 export * from './storage/local';
 export * from './storage/session';
+export * from './hooks/useUpload';
+
 export const version = '0.0.3';

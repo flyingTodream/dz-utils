@@ -6,17 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<script src="../dist/dz-script.min.js"></script>
+<script src="../dist/dz-script.js"></script>
 
 <body>
-    <div id="num"></div>
+    <!-- <div id="num"></div> -->
+    <button onclick="upload()">test upload</button>
 </body>
 <script>
-    dzUtils.animate(1, 500, (val) => {
-        document.getElementById('num').style.width = val + 'px'
-        document.getElementById('num').style.left = val + 'px'
-        document.getElementById('num').style.height = val + 'px'
-    }, 500)
+    function upload() {
+        const { uploadFun } = dzUtils.useUploadFile((file) => {
+            console.log(file)
+            fetch('//test.com', file)
+        })
+        uploadFun()
+    }
+
 </script>
 
 </html>
