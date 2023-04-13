@@ -13,6 +13,7 @@
   },
   "scripts": {
     "prepare": "npm run build:lib",
+    "example": "npm run build && mv ./dist/dz-script.js ./example/",
     "build": "rimraf dist lib && npm run build:bundle && npm run build:lib",
     "release": "node build/build.js --minify && npm run build:lib",
     "prepublishOnly": "node build/prepublish.js",
@@ -55,8 +56,5 @@
     "ts-jest": "^27.0.6",
     "typescript": "^4.4.3",
     "uglify-js": "^3.10.0"
-  },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
   }
 }

@@ -6,21 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<script src="../dist/dz-script.js"></script>
+<script src="https://music.flytodream.cn/js/chunk-vendors.3ca794.js"></script>
+<script src="./dz-script.js"></script>
 
 <body>
-    <!-- <div id="num"></div> -->
     <button onclick="upload()">test upload</button>
 </body>
 <script>
-    function upload() {
-        const { uploadFun } = dzUtils.useUploadFile((file) => {
-            console.log(file)
-            fetch('//test.com', file)
-        })
-        uploadFun()
-    }
-
+    const worker = new dzUtils.updateWorkerjs({
+        pollingTime: 5,
+        scriptUrl: '1.js'
+    })
+    worker.on('update', () => {
+        alert('update')
+    })
 </script>
 
 </html>
