@@ -484,7 +484,7 @@
       return result;
   }
 
-  const version = '0.0.4';
+  const version = '0.0.6';
 
   exports.REFEXP_IPV6 = REFEXP_IPV6;
   exports.REGEXP_CODE_FOUR = REGEXP_CODE_FOUR;

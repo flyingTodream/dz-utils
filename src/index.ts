@@ -11,4 +11,4 @@ export * from './autoReload/updateWorkerjs';
 export * from './html/htmlTransform';
 export * from './common/groupBy';
 
-export const version = '0.0.4';
+export const version = '0.0.6';

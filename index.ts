@@ -1,3 +1,3 @@
 export * from './src/index';
 
-export const version = '0.0.4';
+export const version = '0.0.6';

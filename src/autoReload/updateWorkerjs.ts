@@ -7,11 +7,15 @@ class updateWorkerjs {
   private eventMap: any;
   scriptUrl: string;
 
-  constructor(opt: { path?: string; pollingTime?: number; scriptUrl: string }) {
+  constructor(opt: { path?: string; pollingTime?: number; scriptUrl?: string }) {
+    // 页面路径默认window.location.origin
     this.path = opt.path;
+    // 循环间隔时间
     this.pollingTime = opt.pollingTime || 15;
-    this.myWork = undefined;
+    // 脚本地址，默认远程js地址，可设置成内网地址
     this.scriptUrl = opt.scriptUrl;
+
+    this.myWork = undefined;
     this.eventMap = new Map();
     this.eventMap.set('update', new Set());
     this.eventMap.set('close', new Set());
